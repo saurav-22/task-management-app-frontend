@@ -12,7 +12,7 @@ function CommentList({ token }) {
     const fetchComments = async () => {
       try {
         const response = await axios.get(
-          `http://k8s-taskapp-taskappi-929be65fa1-941636230.ap-south-1.elb.amazonaws.com/api/comments?taskId=${taskId}`,
+          `http://k8s-taskapp-taskappi-929be65fa1-1617985190.ap-south-1.elb.amazonaws.com/api/comments?taskId=${taskId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setComments(response.data);
@@ -27,7 +27,7 @@ function CommentList({ token }) {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://k8s-taskapp-taskappi-929be65fa1-941636230.ap-south-1.elb.amazonaws.com/api/comments',
+        'http://k8s-taskapp-taskappi-929be65fa1-1617985190.ap-south-1.elb.amazonaws.com/api/comments',
         { content, taskId },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -67,5 +67,6 @@ function CommentList({ token }) {
     </div>
   );
 }
+
 
 export default CommentList;
