@@ -12,7 +12,7 @@ function Login({ setToken }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://k8s-taskapp-taskappi-929be65fa1-1617985190.ap-south-1.elb.amazonaws.com/api/users/login', {
+      const response = await axios.post('//k8s-taskapp-taskappi-929be65fa1-1617985190.ap-south-1.elb.amazonaws.com/api/users/login', {
         email,
         password,
       });
@@ -61,3 +61,4 @@ function Login({ setToken }) {
 
 
 export default Login;
+
