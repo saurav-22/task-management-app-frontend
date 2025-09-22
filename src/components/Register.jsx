@@ -12,7 +12,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://k8s-taskapp-taskappi-929be65fa1-941636230.ap-south-1.elb.amazonaws.com/api/users/register', {
+      await axios.post('http://k8s-taskapp-taskappi-929be65fa1-1617985190.ap-south-1.elb.amazonaws.com/api/users/register', {
         email,
         password,
       });
@@ -56,5 +56,6 @@ function Register() {
     </div>
   );
 }
+
 
 export default Register;
