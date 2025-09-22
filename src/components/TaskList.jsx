@@ -14,7 +14,7 @@ function TaskList({ token }) {
     const fetchTasks = async () => {
       try {
         const response = await axios.get(
-          `http://k8s-taskapp-taskappi-929be65fa1-941636230.ap-south-1.elb.amazonaws.com/api/tasks?boardId=${boardId}`,
+          `http://k8s-taskapp-taskappi-929be65fa1-1617985190.ap-south-1.elb.amazonaws.com/api/tasks?boardId=${boardId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setTasks(response.data);
@@ -29,7 +29,7 @@ function TaskList({ token }) {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://k8s-taskapp-taskappi-929be65fa1-941636230.ap-south-1.elb.amazonaws.com/api/tasks',
+        'http://k8s-taskapp-taskappi-929be65fa1-1617985190.ap-south-1.elb.amazonaws.com/api/tasks',
         { title, boardId, assigneeEmail },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -79,5 +79,6 @@ function TaskList({ token }) {
     </div>
   );
 }
+
 
 export default TaskList;
