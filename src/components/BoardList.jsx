@@ -11,7 +11,7 @@ function BoardList({ token }) {
   useEffect(() => {
     const fetchBoards = async () => {
       try {
-        const response = await axios.get('http://k8s-taskapp-taskappi-929be65fa1-941636230.ap-south-1.elb.amazonaws.com/api/boards', {
+        const response = await axios.get('http://k8s-taskapp-taskappi-929be65fa1-1617985190.ap-south-1.elb.amazonaws.com/api/boards', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setBoards(response.data);
@@ -26,7 +26,7 @@ function BoardList({ token }) {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://k8s-taskapp-taskappi-929be65fa1-941636230.ap-south-1.elb.amazonaws.com/api/boards',
+        'http://k8s-taskapp-taskappi-929be65fa1-1617985190.ap-south-1.elb.amazonaws.com/api/boards',
         { title },
         { headers: { Authorization: `Bearer ${token}` } }
       );
